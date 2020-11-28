@@ -1,0 +1,23 @@
+included:
+  - IOSTestApp
+excluded:
+  - Carthage
+  - Pods
+  - IOSTestApp/AppDelegate.swift
+
+disabled_rules:
+  - trailing_whitespace
+
+line_length:  # 单行代码长度,默认error 120
+  warning: 140
+  error: 200
+
+
+function_body_length: # 函数体长度
+  warning: 150
+  error: 300
+
+
+file_length:  # 文件长度
+  warning: 800
+  error: 1200
