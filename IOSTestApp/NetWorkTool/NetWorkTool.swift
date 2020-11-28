@@ -19,6 +19,7 @@ enum Method {
 
 let timeoutInterval = TimeInterval(10)
 
+//swiftlint: disable line_length
 class NetworkTool: NSObject {
     //私有化初始化方法  生成单例
     private override init() {
@@ -29,7 +30,6 @@ class NetworkTool: NSObject {
 
     static let configuration = URLSessionConfiguration.default
 
-    //swiftlint: disable line_length
     func request(path: String, params: [ String: String], method: Method, success: @escaping ApiSuccessClosure, fail: @escaping ApiFailureClosure) {
 
         let url = baseUrl + path
@@ -55,7 +55,7 @@ class NetworkTool: NSObject {
             }
 
         } else if method == Method.POST {
-            //swiftlint: disable line_length
+            
             AF.request(url, method: .post, parameters: params, encoder: URLEncodedFormParameterEncoder.default, headers: headerNormal).responseJSON { (data: AFDataResponse<Any>) in
                 switch data.result {
                 case .success:

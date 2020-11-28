@@ -13,7 +13,7 @@ target 'IOSTestApp' do
 #	pod 'SwiftLint'
 	pod 'RealmSwift', '~> 5.3.6'
 	pod 'MJRefresh', '~> 3.5.0'
-
+	pod 'RxCocoa', '~> 6.0.0-rc.2'
 
   # Pods for IOSTestApp
 

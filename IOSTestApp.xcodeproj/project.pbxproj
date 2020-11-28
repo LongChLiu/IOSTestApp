@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		054139DD1789C0627E617C84 /* Pods_IOSTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C80E615BF96CB79FF9DE13C /* Pods_IOSTestApp.framework */; };
 		53102DB4EBC69D619EA93E88 /* Pods_IOSTestApp_IOSTestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40F5BAA3E252EE545A3AC0E /* Pods_IOSTestApp_IOSTestAppUITests.framework */; };
+		8411C1272572B4E600608EC8 /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411C1262572B4E600608EC8 /* NetWork.swift */; };
 		841FC68D25720E7500AE11B0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC68C25720E7500AE11B0 /* DetailVC.swift */; };
 		841FC69A2572357F00AE11B0 /* JsonStringModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FC6992572357F00AE11B0 /* JsonStringModel.swift */; };
 		84CD240F257136F000FBC028 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD240E257136F000FBC028 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		5C80E615BF96CB79FF9DE13C /* Pods_IOSTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC802EA7D0A9224BF27567D /* Pods_IOSTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CC314D78A770E7EB4390D9 /* Pods-IOSTestApp-IOSTestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSTestApp-IOSTestAppUITests.release.xcconfig"; path = "Target Support Files/Pods-IOSTestApp-IOSTestAppUITests/Pods-IOSTestApp-IOSTestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8411C1262572B4E600608EC8 /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		841FC68C25720E7500AE11B0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		841FC6992572357F00AE11B0 /* JsonStringModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonStringModel.swift; sourceTree = "<group>"; };
 		84CD240B257136F000FBC028 /* IOSTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				84CD24462571381C00FBC028 /* NetWorkTool.swift */,
+				8411C1262572B4E600608EC8 /* NetWork.swift */,
 			);
 			path = NetWorkTool;
 			sourceTree = "<group>";
@@ -315,7 +318,6 @@
 				84CD241E257136F500FBC028 /* Frameworks */,
 				84CD241F257136F500FBC028 /* Resources */,
 				84CD246625713D5700FBC028 /* ShellScript */,
-				755DF4AA23D0E7053BF60C25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -458,23 +460,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		755DF4AA23D0E7053BF60C25 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IOSTestAppTests/Pods-IOSTestAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IOSTestAppTests/Pods-IOSTestAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSTestAppTests/Pods-IOSTestAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7A5D0FC5C4789879FA9F6A2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,6 +585,7 @@
 				84CD24562571381D00FBC028 /* Factory.swift in Sources */,
 				84CD24532571381D00FBC028 /* QuickMethods.swift in Sources */,
 				84CD24592571381D00FBC028 /* NetWorkTool.swift in Sources */,
+				8411C1272572B4E600608EC8 /* NetWork.swift in Sources */,
 				841FC68D25720E7500AE11B0 /* DetailVC.swift in Sources */,
 				84CD24502571381D00FBC028 /* Api.swift in Sources */,
 				84CD245C2571381D00FBC028 /* DataBase.swift in Sources */,

@@ -13,8 +13,6 @@ import MJRefresh
 class CallHistoryVC: UIViewController {
     
     var tabView: UITableView!
-    
-//    var dataArray: Results<JsonStringModel>!
     var dataArray: [JsonStringModel] = []
 
     override func viewDidLoad() {
@@ -33,15 +31,14 @@ class CallHistoryVC: UIViewController {
     }
     
     func makeUI() {
-        weak var weaSelf: CallHistoryVC! = self
-        tabView = Factory.aTableView(view) { (make) in
-            make.left.right.bottom.equalTo(weaSelf.view)
-            make.top.equalTo(weaSelf.view)
+        tabView = Factory.aTableView(view) { [weak self] (make) in
+            make.left.right.bottom.equalTo(self!.view)
+            make.top.equalTo(self!.view)
         }.delegateDataSource_lc(self, self)
-        tabView.register(ShowDataCell.self, forCellReuseIdentifier: "ShowDataCell")
         
-        tabView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
-            weaSelf.refreshData()
+        tabView.register(ShowDataCell.self, forCellReuseIdentifier: "ShowDataCell")
+        tabView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {[weak self] in
+            self!.refreshData()
         })
     }
 

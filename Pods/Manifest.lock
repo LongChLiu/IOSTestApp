@@ -6,6 +6,11 @@ PODS:
   - Realm/Headers (5.3.6)
   - RealmSwift (5.3.6):
     - Realm (= 5.3.6)
+  - RxCocoa (6.0.0-rc.2):
+    - RxRelay (= 6.0.0-rc.2)
+    - RxSwift (= 6.0.0-rc.2)
+  - RxRelay (6.0.0-rc.2):
+    - RxSwift (= 6.0.0-rc.2)
   - RxSwift (6.0.0-rc.2)
   - SnapKit (5.0.1)
 
@@ -13,6 +18,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2.2)
   - MJRefresh (~> 3.5.0)
   - RealmSwift (~> 5.3.6)
+  - RxCocoa (~> 6.0.0-rc.2)
   - RxSwift (~> 6.0.0-rc.2)
   - SnapKit (~> 5.0.1)
 
@@ -22,6 +28,8 @@ SPEC REPOS:
     - MJRefresh
     - Realm
     - RealmSwift
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SnapKit
 
@@ -30,9 +38,11 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
   RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
+  RxCocoa: 38445a25751be5907f52f7ea02c137f52ce2e7f2
+  RxRelay: b9e2483e83f46e4e7bf1234c6fe418e5c2eaf825
   RxSwift: ada35be6643bedf6881cdbd6bbfb27aeea527670
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 6e938ef72849d6a606a5dd57110cbf54afc850bd
+PODFILE CHECKSUM: ed0bc4ee528b2604029724269b0934df34884675
 
 COCOAPODS: 1.9.3
